@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      @font-face {
+        font-family: "Playlist Script";
+        src: url("Playlist Script.otf") format("opentype");
+      }
+
+      html {
+        height: 100vh;
+        /* border: 2px solid green; */
+      }
+
+      :root {
+        --bg-color: black;
+        --text-white: white;
+        --text-yellow: #ffa800;
+      }
+
+      body {
+        /* border: 1px solid yellow; */
+        background-color: var(--bg-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .giant-title {
+        letter-spacing: 2px;
+        font-family: "Anton", sans-serif;
+        color: var(--text-white);
+        font-size: 20vw;
+      }
+
+      .text-group {
+        /* border: 1px solid red; */
+        width: fit-content;
+        height: fit-content;
+        /* line-height: 1; */
+        position: relative;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-10px) rotate(0deg);
+        }
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+      }
+
+      .cursive-text {
+        animation: float 5s ease-in-out infinite;
+      }
+
+      .cursive-text {
+        font-family: "Playlist Script", cursive;
+        color: var(--text-yellow);
+        font-size: 7vw;
+        position: relative;
+        z-index: 1000;
+      }
+
+      .name-title {
+        font-size: 5vw;
+        color: var(--text-yellow);
+        /* position: absolute; */
+        bottom: -50px;
+        left: 10px;
+        width: fit-content;
+        /* border: 2px solid blue; */
+      }
+      .subtitle {
+        font-size: 2vw;
+        color: var(--text-white);
+        font-family: "Poppins", sans-serif;
+      }
+      .myname {
+        font-size: 5vw;
+        color: var(--text-yellow);
+        font-family: "Anton", sans-serif;
+      }
+
+      .img {
+        /* border: 2px solid yellow; */
+        position: absolute;
+        bottom: -17vh;
+        right: 1vw;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .giant-title {
+    opacity: 0;
+    transform: translateY(80px);
+    animation: titleReveal 1s ease-out forwards;
+    z-index: 0;
+}
+
+@keyframes titleReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.name-title {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: nameReveal 0.8s ease-out 0.8s forwards;
+}
+
+@keyframes nameReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.img {
+    opacity: 0;
+    transform: translateX(400px);
+    animation: imageReveal 3s ease-out 0.3s forwards;
+}
+
+@keyframes imageReveal {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.myname {
+    animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%,100% {
+        text-shadow: 0 0 5px rgba(255,168,0,0.3);
+    }
+
+    50% {
+        text-shadow:
+            0 0 10px rgba(255,168,0,0.5),
+            0 0 20px rgba(255,168,0,0.3);
+    }
+}
+    </style>
+  </head>
+  <body>
+    <div class="text-group">
+      <div class="cursive-text" style="line-height: 0.4">Welcome To My</div>
+      <div class="giant-title" style="line-height: 1">PORTFOLIO</div>
+      <div class="name-title" style="line-height: 1">
+        <div class="myname">MOHAMED RIFKY</div>
+        <div class="subtitle">a SOFTWARE DEVELOPER</div>
+      </div>
+      <div class="img"><img src="myimg2.png" alt="" /></div>
+    </div>
+    
+  </body>
+</html>
