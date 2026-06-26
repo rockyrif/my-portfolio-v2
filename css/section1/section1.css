@@ -1,0 +1,139 @@
+.giant-title {
+  letter-spacing: 2px;
+  font-family: "Anton", sans-serif;
+  color: var(--text-white);
+  font-size: 20vw;
+}
+
+.home {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.img {
+  animation: float 5s ease-in-out infinite;
+}
+
+.cursive-text {
+  position: relative;
+  font-family: "Playlist Script", cursive;
+  color: var(--text-yellow);
+  font-size: 7vw;
+  z-index: 1000;
+}
+
+.name-title {
+  font-size: 5vw;
+  color: var(--text-yellow);
+  bottom: -50px;
+  left: 10px;
+  width: fit-content;
+  /* border: 2px solid blue; */
+}
+.subtitle {
+  font-size: 2vw;
+  color: var(--text-white);
+  font-family: "Poppins", sans-serif;
+}
+.subtitle1 {
+  font-size: 1vw;
+  color: var(--text-white);
+  font-family: "Poppins", sans-serif;
+}
+.myname {
+  font-size: 5vw;
+  color: var(--text-yellow);
+  font-family: "Anton", sans-serif;
+}
+
+.img {
+  /* border: 2px solid yellow; */
+  position: absolute;
+  bottom: 0vh;
+  right: 0vw;
+  width: 50%;
+  height: 95%;
+  overflow: hidden;
+}
+
+.img .image-wrapper {
+  height: 100%;
+}
+
+.img .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.giant-title {
+  opacity: 0;
+  transform: translateY(80px);
+  animation: titleReveal 1s ease-out forwards;
+  z-index: 0;
+}
+
+@keyframes titleReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.name-title {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: nameReveal 0.8s ease-out 0.8s forwards;
+}
+
+@keyframes nameReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.img .image-wrapper {
+  opacity: 0;
+  transform: translateX(400px);
+  animation: imageReveal 3s ease-out 0.3s forwards;
+}
+
+@keyframes imageReveal {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.myname {
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 5px rgba(255, 168, 0, 0.3);
+  }
+
+  50% {
+    text-shadow:
+      0 0 10px rgba(255, 168, 0, 0.5),
+      0 0 20px rgba(255, 168, 0, 0.3);
+  }
+}
