@@ -144,32 +144,76 @@
     width: 100%;
     height: 100vh;
     height: 100svh;
+    overflow: hidden;
+  }
+
+  .cursive-text {
+    position: absolute;
+    top: 13%;
+    left: 22px;
+    font-size: clamp(1.5rem, 10vw, 2.5rem);
+  }
+
+  .greeting {
+    position: static;
   }
 
   .giant-title {
     position: absolute;
-    top: 65%;
-    left: 100px;
-    font-weight: 900;
-    height: 80vh;
-    height: 100svh;
-    font-size: 6svh;
-    letter-spacing: -10px;
+    top: 16%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    font-size: clamp(2.25rem, 20vw, 4.75rem);
+    line-height: 1;
+    letter-spacing: 0.02em;
     white-space: nowrap;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    transform: scaleX(10);
-    animation: titleRevealMobile 1s ease-out forwards;
+    writing-mode: horizontal-tb;
+    text-align: center;
+    transform: translateX(-50%);
+    animation: titleRevealMobile 0.8s ease-out forwards;
+  }
+
+  .img {
+    right: 8%;
+    bottom: 6%;
+    width: 82%;
+    height: 76%;
+  }
+
+  .name-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: max(50px, env(safe-area-inset-bottom));
+    width: auto;
+    z-index: 2;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+  }
+
+  .myname {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  .subtitle {
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+  }
+
+  .subtitle1 {
+    font-size: 0.85rem;
   }
 }
 
 @keyframes titleRevealMobile {
   from {
     opacity: 0;
-    transform: translateY(calc(-50% + 80px) scaleX(10));
+    transform: translate(-50%, 18px);
   }
   to {
     opacity: 1;
-    transform: translateY(-50%) scaleX(10);
+    transform: translate(-50%, 0);
   }
 }
