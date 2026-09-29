@@ -1,8 +1,9 @@
 .giant-title {
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-family: "Anton", sans-serif;
   color: var(--text-white);
   font-size: 20vw;
+  line-height: 1;
 }
 
 .home {
@@ -135,5 +136,40 @@
     text-shadow:
       0 0 10px rgba(255, 168, 0, 0.5),
       0 0 20px rgba(255, 168, 0, 0.3);
+  }
+}
+
+@media (max-width: 640px) {
+  .home {
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+  }
+
+  .giant-title {
+    position: absolute;
+    top: 65%;
+    left: 100px;
+    font-weight: 900;
+    height: 80vh;
+    height: 100svh;
+    font-size: 6svh;
+    letter-spacing: -10px;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transform: scaleX(10);
+    animation: titleRevealMobile 1s ease-out forwards;
+  }
+}
+
+@keyframes titleRevealMobile {
+  from {
+    opacity: 0;
+    transform: translateY(calc(-50% + 80px) scaleX(10));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) scaleX(10);
   }
 }
