@@ -1,0 +1,121 @@
+.professionalExp {
+  width: min(100%, 1100px);
+  min-height: 100vh;
+  height: auto;
+  padding: 96px 8vw;
+  display: flex;
+  align-items: center;
+  color: var(--text-white);
+  font-family: "Poppins", sans-serif;
+}
+
+.experience-content {
+  width: 100%;
+}
+
+.experience-eyebrow {
+  margin-bottom: 10px;
+  color: var(--text-yellow);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.professionalExp h2 {
+  margin-bottom: 48px;
+  color: var(--text-white);
+  font-family: "Anton", sans-serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 400;
+}
+
+.experience-entry {
+  padding-left: 28px;
+  border-left: 3px solid var(--text-yellow);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.experience-header h3 {
+  color: var(--text-yellow);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.experience-role,
+.experience-dates {
+  color: var(--text-white);
+  font-size: 1rem;
+}
+
+.experience-dates {
+  flex: 0 0 auto;
+  color: var(--text-yellow);
+}
+
+.experience-highlights {
+  display: grid;
+  gap: 20px;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.8;
+}
+
+.experience-highlights li::marker {
+  color: var(--text-yellow);
+}
+
+@keyframes experience-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .professionalExp .experience-eyebrow,
+  .professionalExp h2,
+  .professionalExp .experience-header,
+  .professionalExp .experience-highlights li {
+    animation: experience-reveal 100s linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .professionalExp .experience-eyebrow,
+  .professionalExp h2,
+  .professionalExp .experience-header,
+  .professionalExp .experience-highlights li {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .professionalExp {
+    min-height: auto;
+    padding: 80px 24px;
+  }
+
+  .professionalExp h2 {
+    margin-bottom: 32px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .experience-entry {
+    padding-left: 18px;
+  }
+}
