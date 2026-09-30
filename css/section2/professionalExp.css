@@ -2,8 +2,7 @@
   width: min(100%, 1100px);
   min-height: auto;
   height: auto;
-  margin-top: 20px;
-  padding: 96px 8vw;
+  padding: 15px 8vw;
   display: flex;
   align-items: center;
   color: var(--text-white);
@@ -113,6 +112,10 @@
   gap: 32px;
 }
 
+.additional-info {
+  padding-bottom: 24px;
+}
+
 .additional-info-group {
   padding-top: 16px;
   border-top: 2px solid var(--text-yellow);
@@ -169,6 +172,10 @@
   .professionalExp {
     min-height: auto;
     padding: 80px 24px;
+  }
+
+  .additional-info {
+    padding-bottom: 24px;
   }
 
   .professionalExp h2 {
